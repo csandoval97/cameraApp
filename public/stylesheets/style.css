@@ -4,15 +4,3 @@ body,html {
   /* color:yellow; */
   height:100%
 }
-.container{
-
-}
-#image{
-  width: 99%;
-  height:99%;
-  max-height: 99%;
-  margin:0;
-  padding:0;
-  background-size:100% 100%;
-  background-repeat: no-repeat;
-}

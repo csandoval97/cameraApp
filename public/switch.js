@@ -21,9 +21,7 @@ function Off(){
 }
 
 setInterval(()=>{
-    // document.getElementById('camImage').src = `http://10.0.0.9/image/index?time=${Date.now()}`
     var imgURL = `http://10.0.0.9/image/index?time=${Date.now()}`
     console.log(imgURL)
-    document.getElementById('image').style.backgroundImage = `url(${imgURL})`
-    // console.log(Date.now())
+    document.getElementById('img').src = imgURL
 },300)
