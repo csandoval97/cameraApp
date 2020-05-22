@@ -8,21 +8,7 @@ var ledSwitch = 0
 //elif ledSw on and ledStat off - turn on led
 //else do nothing
 
-function checkLock(){
-  if(ledSwitch == ledState){
-    ledSwitch=0
-  }
-  else if(ledSwitch && !ledState){
-    ledState=1
-    turnOn();
-  }
-  else{
-    ledState=0;
-    turnOff();
-  }
-  return;
-}
-function turnOn(){
+function On(){
   gpiop.setup(7, gpiop.DIR_OUT)
   .then(() => {
       return gpiop.write(7, true)
@@ -32,7 +18,7 @@ function turnOn(){
   })
 }
 
-function turnOff(){
+function Off(){
   gpiop.setup(7, gpiop.DIR_OUT)
   .then(() => {
       return gpiop.write(7, false)
@@ -44,20 +30,18 @@ function turnOff(){
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  setInterval(function(){checkLock()},500);
+  //setInterval(function(){checkLock()},500);
   res.render('index', { title: 'Express' });
 });
 
 router.get('/on',(req,res)=>{
-  ledSwitch=1
-
+  On()
   res.render('index', { title: 'Express' });
 })
 
 
 router.get('/off',(req,res)=>{
-  ledSwitch=0
-
+  Off()
   res.render('index', { title: 'Express' });
 })
 

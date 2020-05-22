@@ -1,17 +1,8 @@
 {{> partials/head}}
-    <h1>Hello Worlds</h1>
-    <div class="row">
-        <div class="col-2">
-            <div class="row">
-                <button type="button" class="btn btn-success" id="onbtn" onmousedown="turnOn()" onmouseup="turnOff()">ON</button>
-                <!-- <button type="button"  class="btn btn-danger" id="offbtn" onclick="turnOff()">OFF</button> -->
-            </div>
-        </div>
-        <div class="col-10">
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="/camera.html" ></iframe>
-            </div>
-        </div>
-
+    <div class="row h-100" >
+        <nav class="navbar navbar-dark bg-dark w-100">
+            <button class='btn btn-success' onmousedown="On()" onmouseup="Off()">Open Door</button>
+        </nav>
+        <img src='http://10.0.0.9/image/index?time=0' height="90%" width="100%" id="img">
     </div>
 {{> partials/foot}}
