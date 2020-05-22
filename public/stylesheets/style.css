@@ -1,8 +1,18 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body,html {
+  /* padding: 50px; */
+  /* font: 1s4px "Lucida Grande", Helvetica, Arial, sans-serif; */
+  /* color:yellow; */
+  height:100%
 }
+.container{
 
-a {
-  color: #00B7FF;
+}
+#image{
+  width: 99%;
+  height:99%;
+  max-height: 99%;
+  margin:0;
+  padding:0;
+  background-size:100% 100%;
+  background-repeat: no-repeat;
 }

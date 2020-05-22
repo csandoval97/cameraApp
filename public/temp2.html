@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<img id="camImage" src="http://10.0.0.9/image/index?time=0" alt="">
+	<script>
+		setInterval(()=>{
+			document.getElementById('camImage').src = `http://10.0.0.9/image/index?time=${Date.now()}`
+			console.log(Date.now())
+		},300)
+	</script>
+</body>
+</html>
