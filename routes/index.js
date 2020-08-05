@@ -45,4 +45,10 @@ router.get('/off',(req,res)=>{
   res.render('index', { title: 'Express' });
 })
 
+router.get('/opendoor',(req,res)=>{
+  On()
+  setTimeout(Off,3000)
+  res.render('index', { title: 'Express' });
+})
+
 module.exports = router;
