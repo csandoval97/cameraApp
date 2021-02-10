@@ -21,7 +21,7 @@ function Off(){
 }
 
 setInterval(()=>{
-    var imgURL = `http://10.0.0.9/image/index?time=${Date.now()}`
+    var imgURL = `http://10.0.0.10/image/index?time=${Date.now()}`
     console.log(imgURL)
     document.getElementById('img').src = imgURL
 },300)
